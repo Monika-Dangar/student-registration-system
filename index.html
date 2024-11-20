@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Registration System</h1>
+    <p>Register student details such as name, roll number, email, and contact number, and manage records (edit, delete).</p>
+    <div class="mainBody">
+    <main>
+        <!-- Left section for the form -->
+        <section class="form-container">
+            <p class="headings">Fill the form</p>
+                <form action="">
+                    <label for="name">Name<span style="color: red;">*</span></label>
+                    <input type="text" name="name" id="name" required aria-label="required" pattern="^[A-Za-z\s]+$">
+                    <label for="rollNo">Roll no<span style="color: red;">*</span></label>
+                    <input type="number" name="rollNo" id="rollNo" required aria-label="required">
+                    <label for="emailID">Email ID<span style="color: red;">*</span></label>
+                    <input type="email" name="emailID" id="emailID" required aria-label="required">
+                    <label for="contact">Contact no<span style="color: red;">*</span></label>
+                    <input type="tel" name="contact" id="contact" required aria-label="required" pattern="^\d{10}$" placeholder="9876543210">
+                    <button type="submit" id="submitBtn">Submit</button>
+                </form>
+        </section>
+
+        <!-- Right section for the list of students -->
+        <section class="list-container">
+            <header class="headings">
+                <span class="details">Name</span>
+                <span class="details">Roll No</span>
+                <span class="details">Email ID</span>
+                <span class="details">Contact No</span>
+                <span class="details">Modifications</span>
+            </header>
+            <ol class="entries"></ol>
+        </section>
+    </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
